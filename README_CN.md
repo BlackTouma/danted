@@ -45,10 +45,10 @@
 <h3>******安装后使用说明</h3>
 <ul>
 <li> 1. 命令参数 /etc/init.d/sockd {start|stop|restart|status|add|del}</li>
-<li> 2. 重启sock5 /etc/init.d/sockd restart  或者 service danted restart </li>
-<li> 3. 关闭sock5 /etc/init.d/sockd stop 或者 service danted stop </li>
-<li> 4. 开启sock5 /etc/init.d/sockd start 或者 service danted start </li>
-<li> 5. 查看sock5状态 /etc/init.d/sockd status 或者 service danted status </li>
+<li> 2. 重启sock5 /etc/init.d/sockd restart  或者 service sockd restart </li>
+<li> 3. 关闭sock5 /etc/init.d/sockd stop 或者 service sockd stop </li>
+<li> 4. 开启sock5 /etc/init.d/sockd start 或者 service sockd start </li>
+<li> 5. 查看sock5状态 /etc/init.d/sockd status 或者 service sockd status </li>
 <li> 6. 添加SOCK5 PAM用户/修改密码 /etc/init.d/sockd add 用户名 密码</li>
 <li> 7. 删除SOCK5 PAM用户 /etc/init.d/sockd del 用户名</li>
 <li> 8. 配置文件路径/etc/danted/sockd.conf </li>
@@ -62,7 +62,7 @@
 <ol>
 <li>进入 /etc/danted/ 找到配置文件</li>
 <li>修改 第一个pass {} 模块下的 from: Master_IP/32 to: 0.0.0.0/0 . 把 Master_IP/32 修改为需要使用代理的Ip段/IP地址 如 114.114.114.0/24 或者 5.5.5.5/32 . 多个访问源，请复制多个 client pass {} 模块</li>
-<li>重启Danted 进程 service danted restart </li>
+<li>重启Danted 进程 service sockd restart </li>
 </ol>
 <li> 3. 如需删除danted，请参考以下命令删除程序文件</li>
 
